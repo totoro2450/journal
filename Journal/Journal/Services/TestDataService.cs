@@ -1,5 +1,5 @@
 ﻿using Journal.Database.Context;
-using Journal.Database.Entities;
+using Journal.Database.Entities.Application;
 using Journal.Services.Attributes;
 using Journal.Services.Base;
 

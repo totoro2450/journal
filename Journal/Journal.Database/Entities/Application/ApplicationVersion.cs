@@ -4,7 +4,7 @@ using System.Text.Json.Serialization;
 using Journal.Database.Base;
 using Microsoft.EntityFrameworkCore;
 
-namespace Journal.Database.Entities
+namespace Journal.Database.Entities.Application
 {
     [ExcludeFromCodeCoverage]
     [Table("ApplicationVersions", Schema = "Application")]
@@ -12,7 +12,7 @@ namespace Journal.Database.Entities
     public class ApplicationVersion : EntityBase
     {
         public int ApplicationId { get; set; }
-        
+
         [JsonIgnore]
         public Application Application { get; set; }
     }

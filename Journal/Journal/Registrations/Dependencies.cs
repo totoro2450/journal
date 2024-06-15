@@ -1,8 +1,6 @@
-﻿using Journal.Database.Base;
-using Journal.Helper;
-using Journal.Services;
-using Journal.Services.Attributes;
+﻿using Journal.Services.Attributes;
 using Journal.Services.Base;
+using Journal.Shared.Helpers;
 
 namespace Journal.Registrations
 {

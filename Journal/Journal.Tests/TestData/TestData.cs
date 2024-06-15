@@ -1,14 +1,9 @@
-﻿using Journal.Tests.Helper;
-using Journal.Tests.TestData.Attributes;
+﻿using Journal.Tests.TestData.Attributes;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Journal.Database.Base;
-using Journal.Database.Entities;
+using Journal.Shared.Helpers;
 using Journal.Tests.Environment;
+using Journal.Database.Interfaces;
 
 namespace Journal.Tests.TestData
 {

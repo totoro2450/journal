@@ -1,4 +1,5 @@
-﻿using Journal.Database.Entities;
+﻿using Journal.Database.Entities.Application;
+using Journal.Database.Entities.Security;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 
@@ -13,6 +14,12 @@ namespace Journal.Database.Context
         public DbSet<Application> Applications { get; set; }
 
         public DbSet<ApplicationVersion> ApplicationVersions { get; set; }
+
+        public DbSet<User> Users { get; set; }
+
+        public DbSet<SecurityRole> Roles { get; set; }
+
+        public DbSet<SecurityUserRole> UserRoles { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

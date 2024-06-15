@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Journal.Database\Journal.Database.csproj" />
+    <ProjectReference Include="..\Journal.Shared\Journal.Shared.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,4 @@
-﻿namespace Journal.Database.Base
+﻿namespace Journal.Database.Interfaces
 {
     public interface IEntity
     {

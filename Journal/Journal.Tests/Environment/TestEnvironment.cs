@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using Journal.Database.Base;
 using Journal.Database.Context;
 using Journal.Database.Entities;
-using Journal.Tests.Helper;
 using Journal.Tests.TestData.Applications;
 using Journal.Tests.TestData.Attributes;
 using Microsoft.EntityFrameworkCore;

@@ -1,10 +1,9 @@
 ﻿using Journal.Database.Base;
 using Microsoft.EntityFrameworkCore;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Diagnostics.CodeAnalysis;
 
-namespace Journal.Database.Entities
+namespace Journal.Database.Entities.Application
 {
     [ExcludeFromCodeCoverage]
     [Table("Applications", Schema = "Application")]

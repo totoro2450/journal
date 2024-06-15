@@ -1,4 +1,4 @@
-﻿namespace Journal.Tests.Helper
+﻿namespace Journal.Shared.Helpers
 {
     public static class ReflectionHelper
     {
@@ -15,7 +15,7 @@
         {
             var assemblies = AppDomain.CurrentDomain.GetAssemblies()
                 .Where(x => x.FullName != null)
-                .Where(x => x.FullName.ToString().StartsWith(AssemblySearchPrefix));
+                .Where(x => x.FullName!.ToString().StartsWith(AssemblySearchPrefix));
 
             var retClasses = new List<ClassWithAttribute<TAttribute>>();
 
@@ -32,7 +32,7 @@
                 {
                     assemblyTypes = assembly.GetTypes()
                         .Where(x => x.BaseType != null)
-                        .Where(x => x.BaseType.Name.StartsWith(baseClass.Name + "`")).ToList();
+                        .Where(x => x.BaseType!.Name.StartsWith(baseClass.Name + "`")).ToList();
                 }
 
                 foreach (var classType in assemblyTypes)
@@ -55,11 +55,12 @@
 
         public class ClassWithAttribute<TAttribute>
         {
-            public Type ClassType { get; set; }
+            public Type? ClassType { get; set; }
 
             public List<TAttribute> Attributes { get; set; } = new();
 
-            public TAttribute Attribute => Attributes.FirstOrDefault();
+            public TAttribute Attribute => Attributes.FirstOrDefault()!;
         }
     }
 }
+

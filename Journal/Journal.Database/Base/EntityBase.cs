@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Journal.Database.Interfaces;
 
 namespace Journal.Database.Base
 {

@@ -1,4 +1,4 @@
-﻿using Journal.Database.Entities;
+﻿using Journal.Database.Entities.Application;
 using Journal.Tests.TestData.Attributes;
 
 namespace Journal.Tests.TestData.Applications
