@@ -17,9 +17,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{4B70D7
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Journal.Shared", "Journal.Shared\Journal.Shared.csproj", "{DE979CDD-C225-4B62-AE01-0002D8E7189F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Journal.Database.Tests", "Journal.Database.Tests\Journal.Database.Tests.csproj", "{1277DDC0-FF6D-4FCE-81E4-CFD2DE2658C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Journal.Database.Tests", "Journal.Database.Tests\Journal.Database.Tests.csproj", "{1277DDC0-FF6D-4FCE-81E4-CFD2DE2658C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Journal.Shared.Tests", "Journal.Shared.Tests\Journal.Shared.Tests.csproj", "{3A3632EA-2C91-4E85-98DF-FDC4628E5468}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Journal.Shared.Tests", "Journal.Shared.Tests\Journal.Shared.Tests.csproj", "{3A3632EA-2C91-4E85-98DF-FDC4628E5468}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Journal.Database.Data", "Journal.Database.Data\Journal.Database.Data.csproj", "{DF1848A0-1453-41C9-ABCD-039D325DEC3D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{3A3632EA-2C91-4E85-98DF-FDC4628E5468}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A3632EA-2C91-4E85-98DF-FDC4628E5468}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A3632EA-2C91-4E85-98DF-FDC4628E5468}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF1848A0-1453-41C9-ABCD-039D325DEC3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF1848A0-1453-41C9-ABCD-039D325DEC3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF1848A0-1453-41C9-ABCD-039D325DEC3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF1848A0-1453-41C9-ABCD-039D325DEC3D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,6 +68,7 @@ Global
 		{DE979CDD-C225-4B62-AE01-0002D8E7189F} = {4B70D702-3CF5-47BD-A1C3-FF9EF1721922}
 		{1277DDC0-FF6D-4FCE-81E4-CFD2DE2658C9} = {AAA947BE-9179-4BB5-9BA1-909C4E770B55}
 		{3A3632EA-2C91-4E85-98DF-FDC4628E5468} = {4B70D702-3CF5-47BD-A1C3-FF9EF1721922}
+		{DF1848A0-1453-41C9-ABCD-039D325DEC3D} = {AAA947BE-9179-4BB5-9BA1-909C4E770B55}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C7E49D51-81B3-4CF0-A089-120C13C69FF5}

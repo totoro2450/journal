@@ -41,7 +41,7 @@ namespace Journal.Shared.Helpers
 
         public static string Decrypt(string? text, string key)
         {
-            var cipherTextBytesWithSaltAndIv = Convert.FromBase64String(text);
+            var cipherTextBytesWithSaltAndIv = Convert.FromBase64String(text!);
             var saltStringBytes = cipherTextBytesWithSaltAndIv.Take(KeySize / 16).ToArray();
             var ivStringBytes = cipherTextBytesWithSaltAndIv.Skip(KeySize / 16).Take(KeySize / 16).ToArray();
             var cipherTextBytes = cipherTextBytesWithSaltAndIv.Skip((KeySize / 16) * 2)

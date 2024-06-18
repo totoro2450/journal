@@ -55,7 +55,7 @@
 
         public class ClassWithAttribute<TAttribute>
         {
-            public Type? ClassType { get; set; }
+            public Type ClassType { get; set; }
 
             public List<TAttribute> Attributes { get; set; } = new();
 

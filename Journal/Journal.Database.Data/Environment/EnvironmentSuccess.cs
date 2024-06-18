@@ -1,6 +1,7 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Journal.Database.Data.Environment.Base;
+using Microsoft.Extensions.DependencyInjection;
 
-namespace Journal.Tests.Environment
+namespace Journal.Database.Data.Environment
 {
     public class EnvironmentSuccess: EnvironmentBase
     {

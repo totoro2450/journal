@@ -1,0 +1,32 @@
+﻿@page
+@using Journal.DTO
+@model Journal.Pages.UsersModel
+@{
+    ViewData["Title"] = "Users";
+}
+
+<div>
+    <table>
+        <thead>
+            <th>
+                <td>@(nameof(UserDto.Id))</td>
+                <td>@(nameof(UserDto.Name))</td>
+                <td>@(nameof(UserDto.DisplayName))</td>
+                <td>@(nameof(UserDto.Email))</td>
+                <td>@(nameof(UserDto.IsSuperAdmin))</td>
+            </th>
+        </thead>
+        <tbody>
+            @foreach (var user in Model.Users)
+            {
+                <tr>
+                    <td>@user.Id</td>
+                    <td>@user.Name</td>
+                    <td>@user.DisplayName</td>
+                    <td>@user.Email</td>
+                    <td>@user.IsSuperAdmin</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,4 +1,4 @@
-﻿using Journal.Tests.Environment;
+﻿using Journal.Database.Data.Environment;
 
 namespace Journal.Tests
 {
@@ -8,13 +8,13 @@ namespace Journal.Tests
         [OneTimeSetUp]
         public void OnTimeSetUp()
         {
-            TestEnvironment.CreateTestData();
+            ServiceEnvironment.AddTestData();
         }
 
         [OneTimeTearDown]
         public void OneTimeTearDown()
         {
-            TestEnvironment.RemoveTestData();
+            ServiceEnvironment.RemoveTestData();
         }
     }
 }

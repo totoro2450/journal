@@ -1,21 +1,18 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Journal.Database.Registration;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Journal.Database.Registration;
-using Journal.Registrations;
 using ContextRegistrationParams = Journal.Database.Registration.Dependencies.ContextRegistrationParams;
-using Journal.Database;
 
-namespace Journal.Tests.Environment
+namespace Journal.Database.Data.Environment.Base
 {
     public class EnvironmentBase
     {
         protected readonly IServiceCollection ServiceCollection = new ServiceCollection();
-        protected ServiceProvider? Services;
-
-        public static DateTime BirthDay { get; set; } = DateTime.MaxValue;
+        protected ServiceProvider Services;
 
         public EnvironmentBase()
         {
+            Services = ServiceCollection.BuildServiceProvider();
             RegisterServices();
         }
 
@@ -27,7 +24,6 @@ namespace Journal.Tests.Environment
         {
             ServiceCollection.AddSingleton<ILoggerFactory, LoggerFactory>();
             ServiceCollection.AddSingleton(typeof(ILogger<>), typeof(Logger<>));
-            ServiceCollection.AddScoped<Pages.IndexModel>();
 
             var regParams = new ContextRegistrationParams
             {
@@ -36,14 +32,13 @@ namespace Journal.Tests.Environment
             };
 
             ServiceCollection.RegisterDataBaseDependencies(regParams);
-            ServiceCollection.RegisterJournal();
 
             AdjustEnvironment(ServiceCollection);
 
             Services = ServiceCollection.BuildServiceProvider();
         }
 
-        public T GetService<T>()
+        public T GetService<T>() where T : notnull
         {
             return Services.GetRequiredService<T>();
         }

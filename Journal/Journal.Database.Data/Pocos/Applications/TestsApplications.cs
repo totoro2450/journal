@@ -1,10 +1,10 @@
-﻿using Journal.Database.Entities.Application;
-using Journal.Tests.TestData.Attributes;
+﻿using Journal.Database.Data.Attributes;
+using Journal.Database.Entities.Application;
 
-namespace Journal.Tests.TestData.Applications
+namespace Journal.Database.Data.Pocos.Applications
 {
-    [TestPoco(TestLifeTime.EntireRun, TestDataTypeOrder.Application)]
-    public class TestApplication: Application
+    [TestData(PocoLifeTime.EntireRun, DataTypeOrder.Application)]
+    public class TestApplication : Application
     {
         public TestApplication()
         {
@@ -15,7 +15,7 @@ namespace Journal.Tests.TestData.Applications
         }
     }
 
-    [TestPoco(TestLifeTime.EntireRun, TestDataTypeOrder.ApplicationVersion)]
+    [TestData(PocoLifeTime.EntireRun, DataTypeOrder.ApplicationVersion)]
     public class TestApplicationVersion : ApplicationVersion
     {
         public TestApplicationVersion()
@@ -25,7 +25,7 @@ namespace Journal.Tests.TestData.Applications
         }
     }
 
-    [TestPoco(TestLifeTime.SingleTest)]
+    [TestData(PocoLifeTime.SingleTest)]
     public class TestApplication2 : Application
     {
         public TestApplication2()

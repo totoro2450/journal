@@ -12,7 +12,7 @@ namespace Journal.Database.Entities.Security
     public class SecurityRole: EntityBase, INameable
     {
         public string Name { get; set; }
-        public string Rank { get; set; }
+        public int Rank { get; set; }
         public List<SecurityUserRole> Users { get; set; } = new();
     }
 }

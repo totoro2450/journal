@@ -9,7 +9,6 @@ namespace Journal.Database.Entities.Security
     [ExcludeFromCodeCoverage]
     [Table("Users", Schema = "Security")]
     [Index(nameof(Guid), IsUnique = true)]
-    [Index(nameof(Name), IsUnique = true)]
     [Index(nameof(Email), IsUnique = true)]
     public class User: EntityBase, INameable
     {

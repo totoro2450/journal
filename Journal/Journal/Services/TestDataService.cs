@@ -17,10 +17,10 @@ namespace Journal.Services
 
         public void CreateApplications()
         {
-            DbContext.Applications.Add(new Application { Name = "Test Application 1", Guid = Guid.NewGuid(), Description = "" });
-            DbContext.Applications.Add(new Application { Name = "Test Application 2", Guid = Guid.NewGuid(), Description = "" });
-            DbContext.Applications.Add(new Application { Name = "Test Application 3", Guid = Guid.NewGuid(), Description = "" });
-            // DbContext.SaveChanges();
+            //DbContext.Applications.Add(new Application { Name = "Test Application 1", Guid = Guid.NewGuid(), Description = "" });
+            //DbContext.Applications.Add(new Application { Name = "Test Application 2", Guid = Guid.NewGuid(), Description = "" });
+            //DbContext.Applications.Add(new Application { Name = "Test Application 3", Guid = Guid.NewGuid(), Description = "" });
+            //DbContext.SaveChanges();
         }
     }
 }

@@ -26,10 +26,8 @@ namespace Journal.Database.Base
                 Type = typeof(Object).AssemblyQualifiedName!;
                 return null;
             }
-            else
-            {
-                Type = value.GetType().AssemblyQualifiedName!;
-            }
+
+            Type = value.GetType().AssemblyQualifiedName!;
 
             if (IsEncrypted)
                 json = EncryptionHelper.Encrypt(json, Name);
